@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじフォーム</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            height: 100vh;             /* 全画面の高さ */
+            margin: 0;
+            display: flex;
+            flex-direction: column;   /* 縦に並べる */
+            justify-content: center;  /* 縦方向の中央寄せ */
+            align-items: center;      /* 横方向の中央寄せ */
+            background: #f9f9f9;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            align-items: center;
+        }
+        input {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        button {
+            background: #ff9900;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #cc6600;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔮 おみくじを引く</h1>
+    <form action="{% url 'omikuji_result' %}" method="get">
+        <input type="number" name="number" min="1" max="99" required>
+        <button type="submit">占う！</button>
+    </form>
+</body>
+</html>

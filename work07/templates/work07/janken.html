@@ -1,0 +1,13 @@
+<h2>じゃんけんゲーム</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="hand" value="グー">グー</button>
+    <button type="submit" name="hand" value="チョキ">チョキ</button>
+    <button type="submit" name="hand" value="パー">パー</button>
+</form>
+
+{% if result %}
+    <p>あなた: {{ user }}</p>
+    <p>コンピュータ: {{ cpu }}</p>
+    <p>結果: {{ result }}</p>
+{% endif %}

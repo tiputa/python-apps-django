@@ -1,0 +1,10 @@
+<h2>割り勘計算</h2>
+<form method="post">
+    {% csrf_token %}
+    合計金額: <input type="number" name="total"><br>
+    人数: <input type="number" name="people"><br>
+    <button type="submit">計算</button>
+</form>
+{% if result %}
+<p>{{ result }}</p>
+{% endif %}

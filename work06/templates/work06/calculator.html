@@ -1,0 +1,17 @@
+<h2>四則演算計算機</h2>
+<form method="post">
+    {% csrf_token %}
+    数字1: <input type="number" step="any" name="num1"><br>
+    数字2: <input type="number" step="any" name="num2"><br>
+    演算子:
+    <select name="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+    </select><br>
+    <button type="submit">計算</button>
+</form>
+{% if result %}
+<p>結果: {{ result }}</p>
+{% endif %}

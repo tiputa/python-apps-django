@@ -1,0 +1,9 @@
+<h2>令和 → 西暦変換ツール</h2>
+<form method="post">
+    {% csrf_token %}
+    令和 <input type="number" name="reiwa_year"> 年<br>
+    <button type="submit">変換</button>
+</form>
+{% if result %}
+<p>{{ result }}</p>
+{% endif %}

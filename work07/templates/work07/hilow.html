@@ -1,0 +1,14 @@
+<h2>Hi & Low</h2>
+<p>あなたのカード: {{ player_card }}</p>
+
+{% if result %}
+    <p>コンピュータのカード: {{ cpu_card }}</p>
+    <p>結果: {{ result }}</p>
+{% else %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="player_card" value="{{ player_card }}">
+        <button type="submit" name="choice" value="High">High</button>
+        <button type="submit" name="choice" value="Low">Low</button>
+    </form>
+{% endif %}

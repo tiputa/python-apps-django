@@ -1,0 +1,10 @@
+<h2>貯金シミュレーター</h2>
+<form method="post">
+    {% csrf_token %}
+    毎月の貯金額: <input type="number" name="monthly"><br>
+    年数: <input type="number" name="years"><br>
+    <button type="submit">計算</button>
+</form>
+{% if result %}
+<p>{{ result }}</p>
+{% endif %}

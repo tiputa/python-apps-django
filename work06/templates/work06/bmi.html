@@ -1,0 +1,10 @@
+<h2>BMI計算</h2>
+<form method="post">
+    {% csrf_token %}
+    身長(cm): <input type="number" name="height"><br>
+    体重(kg): <input type="number" name="weight"><br>
+    <button type="submit">計算</button>
+</form>
+{% if result %}
+<p>{{ result }}</p>
+{% endif %}
