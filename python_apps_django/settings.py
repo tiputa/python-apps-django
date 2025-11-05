@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "work05_2",
     "work06",
     "work07",
+    "work08",
     "sinnsa",
     "art",
 ]
