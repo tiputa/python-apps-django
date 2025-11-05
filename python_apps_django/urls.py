@@ -26,5 +26,6 @@ urlpatterns = [
     path("work06/", include("work06.urls")),
     path("work07/", include("work07.urls")),
     path("omikuji/", include("sinnsa.urls")),
+    path("work08/", include("work08.urls")),  # 新しく追加するアプリのurls.py
 ]
 # project/urls.py

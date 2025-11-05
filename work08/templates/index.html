@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>メモ一覧</title>
+</head>
+<body>
+    <h1>メモ一覧</h1>
+    <a href="{% url 'new_memo' %}">＋ 新規作成</a>
+    <ul>
+        {% for memo in memos %}
+            <li>
+                <a href="{% url 'edit' memo.id %}">
+                    {{ memo.title }}（{{ memo.updated_at|date:"Y/m/d H:i" }}）
+                </a>
+            </li>
+        {% empty %}
+            <li>メモがありません。</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
