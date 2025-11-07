@@ -21,11 +21,13 @@ from django.urls import include, path
 urlpatterns = [
     path("admin/", admin.site.urls),
     # ... これまで作った他アプリのURL
+    path('', include('work05.urls')),
     path("work05/", include("work05.urls")),  # 新しく追加するアプリのurls.py
     path("work05_2/", include("work05_2.urls")),
     path("work06/", include("work06.urls")),
     path("work07/", include("work07.urls")),
     path("omikuji/", include("sinnsa.urls")),
     path("work08/", include("work08.urls")),  # 新しく追加するアプリのurls.py
+    path("art/", include("art.urls")),
 ]
 # project/urls.py
