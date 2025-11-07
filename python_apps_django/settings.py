@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     "work07",
     "work08",
     "sinnsa",
-    "art",
 ]
 
 MIDDLEWARE = [
